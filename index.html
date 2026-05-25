@@ -2,61 +2,94 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Ikram PostgreSQL Consulting</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- TOP HEADER -->
+
+    <div class="topbar">
+
+        <div class="container topbar-content">
+
+            <div class="brand">
+
+                <img src="https://www.postgresql.org/media/img/about/press/elephant.png"
+                    alt="PostgreSQL Logo">
+
+                <div>
+
+                    <h1>Ikram PostgreSQL Consulting</h1>
+
+                    <p>
+                        Enterprise PostgreSQL Support • HA • Replication • DBA Training
+                    </p>
+
+                </div>
+
+            </div>
+
+            <button class="theme-toggle" onclick="toggleTheme()">
+                Toggle Theme
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- NAVIGATION -->
 
     <nav class="navbar">
 
-        <div class="logo">
-            PostgreSQL Consulting
+        <div class="container">
+
+            <ul>
+
+                <li><a href="#services">Services</a></li>
+                <li><a href="#training">Training</a></li>
+                <li><a href="#opensource">Open Source</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
         </div>
-
-        <ul class="nav-links">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#training">Training</a></li>
-            <li><a href="#opensource">Open Source</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <button class="theme-btn" onclick="toggleDarkMode()">
-            🌙
-        </button>
 
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
 
     <section class="hero">
 
-        <div class="hero-content">
+        <div class="container">
 
-            <h1>
-                Enterprise PostgreSQL Consulting & Support
-            </h1>
+            <h2>
+                PostgreSQL Infrastructure Engineering & Enterprise Support
+            </h2>
 
             <p>
-                High Availability • Replication • Performance Tuning • DBA Training • PostgreSQL Infrastructure
+
+                Specialized PostgreSQL consulting for high availability,
+                replication, performance tuning, backup & recovery,
+                cloud infrastructure and enterprise DBA operations.
+
             </p>
 
             <div class="hero-buttons">
 
                 <a href="#services" class="btn-primary">
-                    Explore Services
+                    View Services
                 </a>
 
                 <a href="#contact" class="btn-secondary">
-                    Contact Us
+                    Contact
                 </a>
 
             </div>
@@ -72,57 +105,87 @@
         <div class="container">
 
             <h2 class="section-title">
-                Professional PostgreSQL Services
+                PostgreSQL Consulting Services
             </h2>
 
-            <div class="cards">
+            <div class="grid">
 
                 <div class="card">
+
                     <h3>PostgreSQL Administration</h3>
+
                     <p>
-                        Enterprise-grade PostgreSQL administration, monitoring,
-                        optimization and production database management.
+
+                        Enterprise-grade PostgreSQL administration,
+                        maintenance, upgrades and production operations.
+
                     </p>
+
                 </div>
 
                 <div class="card">
-                    <h3>Replication & HA</h3>
+
+                    <h3>Replication & High Availability</h3>
+
                     <p>
-                        Streaming replication, repmgr clusters,
-                        failover automation and high availability architecture.
+
+                        Streaming replication, repmgr,
+                        failover automation and HA cluster deployment.
+
                     </p>
+
                 </div>
 
                 <div class="card">
-                    <h3>Performance Tuning</h3>
+
+                    <h3>Performance Optimization</h3>
+
                     <p>
-                        Query optimization, indexing strategy,
-                        vacuum tuning and enterprise performance engineering.
+
+                        Query tuning, indexing strategy,
+                        vacuum optimization and performance analysis.
+
                     </p>
+
                 </div>
 
                 <div class="card">
+
                     <h3>Backup & Recovery</h3>
+
                     <p>
+
                         Barman, pgBackRest, PITR,
-                        WAL archiving and disaster recovery planning.
+                        WAL management and disaster recovery planning.
+
                     </p>
+
                 </div>
 
                 <div class="card">
-                    <h3>Cloud PostgreSQL</h3>
-                    <p>
-                        PostgreSQL deployments on AWS, OCI, Azure,
-                        Kubernetes and containerized infrastructure.
-                    </p>
-                </div>
 
-                <div class="card">
-                    <h3>Migration Services</h3>
+                    <h3>Oracle Migration</h3>
+
                     <p>
+
                         Oracle to PostgreSQL migration,
-                        schema conversion and enterprise modernization.
+                        schema conversion and modernization consulting.
+
                     </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Cloud & Kubernetes</h3>
+
+                    <p>
+
+                        PostgreSQL on AWS, OCI,
+                        Azure, Docker and Kubernetes infrastructure.
+
+                    </p>
+
                 </div>
 
             </div>
@@ -133,38 +196,55 @@
 
     <!-- TRAINING -->
 
-    <section class="section alt-section" id="training">
+    <section class="section light-section" id="training">
 
         <div class="container">
 
             <h2 class="section-title">
-                PostgreSQL Training Programs
+
+                PostgreSQL Training
+
             </h2>
 
-            <div class="cards">
+            <div class="grid">
 
                 <div class="card">
+
                     <h3>PostgreSQL DBA</h3>
+
                     <p>
-                        Production-grade PostgreSQL DBA training
-                        with real enterprise scenarios.
+
+                        Complete DBA administration training
+                        with enterprise production scenarios.
+
                     </p>
+
                 </div>
 
                 <div class="card">
+
                     <h3>Replication & HA</h3>
+
                     <p>
-                        Learn streaming replication,
-                        repmgr, failover and HA architecture.
+
+                        Advanced PostgreSQL replication,
+                        failover and HA architecture training.
+
                     </p>
+
                 </div>
 
                 <div class="card">
-                    <h3>Performance Optimization</h3>
+
+                    <h3>Performance Tuning</h3>
+
                     <p>
-                        Query tuning, indexing,
-                        monitoring and PostgreSQL internals.
+
+                        PostgreSQL internals,
+                        tuning, indexing and optimization workshops.
+
                     </p>
+
                 </div>
 
             </div>
@@ -180,18 +260,24 @@
         <div class="container">
 
             <h2 class="section-title">
-                Open Source Projects
+
+                Open Source Initiatives
+
             </h2>
 
-            <div class="cards">
+            <div class="grid">
 
                 <div class="card">
+
                     <h3>phpPgAdmin Modernization</h3>
 
                     <p>
-                        Modernizing phpPgAdmin for PostgreSQL 17+,
-                        PHP 8.3+ and enterprise Linux environments.
+
+                        Compatibility modernization project
+                        for PostgreSQL 17+ and PHP 8.3+.
+
                     </p>
+
                 </div>
 
             </div>
@@ -202,26 +288,29 @@
 
     <!-- CONTACT -->
 
-    <section class="section alt-section" id="contact">
+    <section class="section light-section" id="contact">
 
         <div class="container">
 
             <h2 class="section-title">
+
                 Contact
+
             </h2>
 
             <div class="contact-box">
 
                 <p>
-                    📧 Email:
-                    <a href="mailto:ikram5@zohomail.in">
-                        ikram5@zohomail.in
-                    </a>
+
+                    Enterprise PostgreSQL Support & Consulting
+
                 </p>
 
-                <p>
-                    PostgreSQL Consulting • DBA Support • Enterprise Training
-                </p>
+                <a href="mailto:ikram5@zohomail.in">
+
+                    ikram5@zohomail.in
+
+                </a>
 
             </div>
 
@@ -233,18 +322,26 @@
 
     <footer>
 
-        <p>
-            © 2026 Ikram PostgreSQL Consulting
-        </p>
+        <div class="container">
+
+            <p>
+
+                © 2026 Ikram PostgreSQL Consulting
+
+            </p>
+
+        </div>
 
     </footer>
 
-    <!-- DARK MODE -->
+    <!-- THEME -->
 
     <script>
 
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
+        function toggleTheme() {
+
+            document.body.classList.toggle('dark');
+
         }
 
     </script>
