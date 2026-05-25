@@ -423,86 +423,99 @@ body.dark .theme-toggle {
 
 /* CONTACT */
 
-.contact-box {
+/* ENTERPRISE CONTACT */
+
+.enterprise-contact {
 
     background:
-        linear-gradient(to bottom,
+        linear-gradient(to right,
             #336791,
             #264866);
 
     color: white;
 
-    border-radius: 8px;
+    padding: 80px 0;
 
-    padding: 60px;
+}
+
+.enterprise-contact-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 50px;
+
+    flex-wrap: wrap;
+
+}
+
+.enterprise-contact h2 {
+
+    font-size: 40px;
+
+    margin-bottom: 18px;
+
+}
+
+.enterprise-contact p {
+
+    max-width: 700px;
+
+    line-height: 1.8;
+
+    color: rgba(255,255,255,0.9);
+
+}
+
+.contact-action {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+.contact-action a {
+
+    background: white;
+
+    color: #264866;
+
+    padding: 16px 26px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 4px;
 
     text-align: center;
 
-}
-
-.contact-box a {
-
-    color: white;
-
-    font-size: 24px;
-
-    font-weight: 600;
-
-    text-decoration: none;
+    transition: 0.2s;
 
 }
 
-.contact-box a {
+.contact-action a:hover {
 
-    color: var(--pg-blue);
+    transform: translateY(-2px);
 
-    font-size: 20px;
+}
 
-    text-decoration: none;
+.contact-action span {
+
+    font-size: 15px;
+
+    opacity: 0.9;
 
 }
 
 /* FOOTER */
 
-<footer>
-
-    <div class="container footer-grid">
-
-        <div>
-
-            <h3>Ikram PostgreSQL Consulting</h3>
-
-            <p>
-                Enterprise PostgreSQL administration,
-                replication and infrastructure engineering.
-            </p>
-
-        </div>
-
-        <div>
-
-            <h4>Services</h4>
-
-            <ul>
-                <li>Replication</li>
-                <li>Performance Tuning</li>
-                <li>HA Architecture</li>
-                <li>Cloud PostgreSQL</li>
-            </ul>
-
-        </div>
-
-        <div>
-
-            <h4>Contact</h4>
-
-            <p>ikram5@zohomail.in</p>
-
-        </div>
-
-    </div>
-
-</footer>
 .footer-grid {
 
     display: grid;
