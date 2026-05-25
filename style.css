@@ -4,7 +4,7 @@
     --pg-dark: #264866;
 
     --background: #ffffff;
-    --light-bg: #edf2f7;
+    --light-bg: #dde5ee;
 
     --text: #222;
     --muted: #475569;
@@ -135,7 +135,7 @@ section {
 
 .navbar {
 
-    background: #f8fafc;
+    background: white;
 
     border-bottom: 1px solid var(--border);
 
@@ -572,6 +572,11 @@ body.dark .card {
     color: var(--pg-blue);
 
     font-size: 22px;
+
+}
+body.dark .card h3 {
+
+    color: #93c5fd;
 
 }
 
