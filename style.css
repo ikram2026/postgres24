@@ -84,6 +84,8 @@ body {
     justify-content: space-between;
     align-items: center;
 
+    gap: 30px;
+
 }
 
 .brand {
@@ -93,10 +95,20 @@ body {
     gap: 20px;
 
 }
+.brand div {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
 
 .brand img {
 
-    width: 70px;
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
 
 }
 
@@ -122,8 +134,15 @@ body {
 
     border-bottom: 1px solid var(--border);
 
-}
+    position: sticky;
+    top: 0;
 
+    z-index: 1000;
+
+    box-shadow:
+        0 1px 2px rgba(0,0,0,0.04);
+
+}
 body.dark .navbar {
 
     background: #0f172a;
@@ -148,13 +167,19 @@ body.dark .navbar {
 
     display: block;
 
-    padding: 16px 26px;
+    padding: 16px 24px;
 
     text-decoration: none;
 
     color: var(--text);
 
-    font-size: 15px;
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.2px;
+
+    transition: 0.2s;
 
 }
 
@@ -204,11 +229,15 @@ body.dark .hero {
 
 .hero h2 {
 
-    font-size: 42px;
+    font-size: 52px;
 
-    max-width: 800px;
+    line-height: 1.15;
 
-    margin-bottom: 20px;
+    font-weight: 500;
+
+    max-width: 900px;
+
+    margin-bottom: 24px;
 
     color: var(--pg-dark);
 
@@ -222,11 +251,15 @@ body.dark .hero h2 {
 
 .hero p {
 
-    max-width: 700px;
+    max-width: 760px;
 
     color: var(--muted);
 
-    margin-bottom: 35px;
+    margin-bottom: 38px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
 
 }
 
@@ -345,9 +378,19 @@ body.dark .theme-toggle {
 
     border: 1px solid var(--border);
 
-    padding: 30px;
+    padding: 34px;
 
-    transition: 0.3s;
+    border-radius: 6px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+    background:
+        linear-gradient(to bottom,
+            rgba(255,255,255,0.96),
+            rgba(248,250,252,0.98));
 
 }
 
@@ -355,7 +398,10 @@ body.dark .theme-toggle {
 
     border-color: var(--pg-blue);
 
-    transform: translateY(-4px);
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 24px rgba(0,0,0,0.06);
 
 }
 
@@ -379,19 +425,30 @@ body.dark .theme-toggle {
 
 .contact-box {
 
-    background: var(--card);
+    background:
+        linear-gradient(to bottom,
+            #336791,
+            #264866);
 
-    border: 1px solid var(--border);
+    color: white;
 
-    padding: 40px;
+    border-radius: 8px;
+
+    padding: 60px;
 
     text-align: center;
 
 }
 
-.contact-box p {
+.contact-box a {
 
-    margin-bottom: 12px;
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+    text-decoration: none;
 
 }
 
@@ -407,15 +464,82 @@ body.dark .theme-toggle {
 
 /* FOOTER */
 
-footer {
+<footer>
 
-    background: #1f2937;
+    <div class="container footer-grid">
 
-    color: white;
+        <div>
 
-    padding: 30px 0;
+            <h3>Ikram PostgreSQL Consulting</h3>
 
-    margin-top: 50px;
+            <p>
+                Enterprise PostgreSQL administration,
+                replication and infrastructure engineering.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h4>Services</h4>
+
+            <ul>
+                <li>Replication</li>
+                <li>Performance Tuning</li>
+                <li>HA Architecture</li>
+                <li>Cloud PostgreSQL</li>
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h4>Contact</h4>
+
+            <p>ikram5@zohomail.in</p>
+
+        </div>
+
+    </div>
+
+</footer>
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 40px;
+
+}
+
+footer h3,
+footer h4 {
+
+    margin-bottom: 14px;
+
+}
+
+footer ul {
+
+    list-style: none;
+
+}
+
+footer li {
+
+    margin-bottom: 8px;
+
+    color: rgba(255,255,255,0.8);
+
+}
+
+footer p {
+
+    color: rgba(255,255,255,0.8);
+
+    line-height: 1.7;
 
 }
 
@@ -449,3 +573,4 @@ footer {
     }
 
 }
+
