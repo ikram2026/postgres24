@@ -38,8 +38,12 @@
             </div>
 
             <button class="theme-toggle" onclick="toggleTheme()">
-                Toggle Theme
-            </button>
+
+    <span class="theme-icon">☀</span>
+
+    <span class="theme-text">Theme</span>
+
+</button>
 
         </div>
 
@@ -451,13 +455,28 @@
 
     <script>
 
-        function toggleTheme() {
+    function toggleTheme() {
 
-            document.body.classList.toggle('dark');
+        document.body.classList.toggle('dark');
+
+        const icon =
+            document.querySelector('.theme-icon');
+
+        if (
+            document.body.classList.contains('dark')
+        ) {
+
+            icon.textContent = '🌙';
+
+        } else {
+
+            icon.textContent = '☀';
 
         }
 
-    </script>
+    }
+
+</script>
 
 </body>
 
