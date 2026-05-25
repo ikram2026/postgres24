@@ -6,11 +6,14 @@
     <title>PostgreSQL Consulting & Training</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="hero">
+<header>
     <h1>PostgreSQL Consulting & Enterprise Support</h1>
     <p>High Availability • Replication • Performance • Training</p>
+
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
 </header>
 
 <nav>
@@ -20,60 +23,86 @@
     <a href="#contact">Contact</a>
 </nav>
 
+<div class="container">
+
 <section id="services">
-    <h2>Professional PostgreSQL Services</h2>
+    <h2 class="section-title">Professional PostgreSQL Services</h2>
 
-    <div class="card">
-        <h3>PostgreSQL Administration</h3>
-        <p>Enterprise PostgreSQL administration and production support.</p>
-    </div>
+    <div class="cards">
 
-    <div class="card">
-        <h3>High Availability & Replication</h3>
-        <p>Streaming replication, repmgr, failover, and HA architecture.</p>
-    </div>
+        <div class="card">
+            <h3>PostgreSQL Administration</h3>
+            <p>Enterprise PostgreSQL administration and production support.</p>
+        </div>
 
-    <div class="card">
-        <h3>Performance Optimization</h3>
-        <p>Query tuning, indexing, vacuum optimization, and monitoring.</p>
-    </div>
+        <div class="card">
+            <h3>HA & Replication</h3>
+            <p>Streaming replication, repmgr, failover and cluster setup.</p>
+        </div>
 
-    <div class="card">
-        <h3>Backup & Recovery</h3>
-        <p>Barman, pgBackRest, PITR, WAL management and DR planning.</p>
+        <div class="card">
+            <h3>Performance Tuning</h3>
+            <p>Query optimization, indexing, vacuum tuning and monitoring.</p>
+        </div>
+
+        <div class="card">
+            <h3>Backup & Recovery</h3>
+            <p>Barman, pgBackRest, PITR and disaster recovery planning.</p>
+        </div>
+
     </div>
 </section>
 
 <section id="training">
-    <h2>PostgreSQL Training Programs</h2>
+    <h2 class="section-title">Training Programs</h2>
 
-    <ul>
-        <li>PostgreSQL DBA Training</li>
-        <li>Advanced Replication</li>
-        <li>Performance Tuning</li>
-        <li>Linux for PostgreSQL</li>
-        <li>Backup & Recovery</li>
-    </ul>
+    <div class="cards">
+
+        <div class="card">
+            <h3>PostgreSQL DBA</h3>
+            <p>Enterprise DBA training for production PostgreSQL environments.</p>
+        </div>
+
+        <div class="card">
+            <h3>Replication Training</h3>
+            <p>Hands-on HA and replication architecture workshops.</p>
+        </div>
+
+    </div>
 </section>
 
 <section id="opensource">
-    <h2>Open Source Projects</h2>
+    <h2 class="section-title">Open Source Projects</h2>
 
-    <div class="card">
-        <h3>phpPgAdmin Modernization</h3>
-        <p>Modernizing phpPgAdmin for PostgreSQL 17+ and PHP 8.3 compatibility.</p>
+    <div class="cards">
+
+        <div class="card">
+            <h3>phpPgAdmin Modernization</h3>
+            <p>Modern PostgreSQL web administration platform for PHP 8.3+ and PostgreSQL 17+.</p>
+        </div>
+
     </div>
 </section>
 
 <section id="contact">
-    <h2>Contact</h2>
+    <h2 class="section-title">Contact</h2>
 
-    <p>Email: ikram5@zohomail.in</p>
+    <div class="card">
+        <p>Email: your-email@example.com</p>
+    </div>
 </section>
+
+</div>
 
 <footer>
     <p>© 2026 PostgreSQL Consulting & Training</p>
 </footer>
+
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+}
+</script>
 
 </body>
 </html>

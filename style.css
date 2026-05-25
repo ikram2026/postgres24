@@ -1,50 +1,113 @@
+:root {
+    --pg-blue: #336791;
+    --pg-dark: #1d3f5f;
+    --background: #f5f7fa;
+    --text: #222;
+    --card: #ffffff;
+}
+
+body.dark {
+    --background: #0f1720;
+    --text: #f1f1f1;
+    --card: #1e293b;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    color: #222;
+    background: var(--background);
+    color: var(--text);
+    transition: 0.3s;
 }
 
-.hero {
-    background: #336791;
+header {
+    background: linear-gradient(135deg, var(--pg-blue), var(--pg-dark));
     color: white;
     padding: 80px 20px;
     text-align: center;
 }
 
-.hero h1 {
-    font-size: 42px;
+header h1 {
+    font-size: 48px;
     margin-bottom: 10px;
 }
 
+header p {
+    font-size: 20px;
+}
+
 nav {
-    background: #222;
+    background: #111827;
     padding: 15px;
     text-align: center;
+    position: sticky;
+    top: 0;
 }
 
 nav a {
     color: white;
-    text-decoration: none;
     margin: 15px;
+    text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
-section {
-    padding: 40px;
+nav a:hover {
+    color: #60a5fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--pg-blue);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
 .card {
-    background: white;
+    background: var(--card);
     padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--pg-blue);
+}
+
+button {
+    background: var(--pg-blue);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
     margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background: var(--pg-dark);
 }
 
 footer {
-    background: #222;
+    background: #111827;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
+    margin-top: 40px;
 }
