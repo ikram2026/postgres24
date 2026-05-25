@@ -321,49 +321,134 @@ body.dark .hero h2 {
 }
 
 /* THEME TOGGLE */
+/* ADVANCED THEME SWITCH */
 
-.theme-toggle {
+.theme-switch-wrapper {
 
     display: flex;
-
     align-items: center;
 
-    gap: 8px;
+}
 
-    background: rgba(255,255,255,0.12);
+.theme-switch {
 
-    color: white;
+    position: relative;
 
-    border: 1px solid rgba(255,255,255,0.2);
+    display: inline-block;
 
-    padding: 10px 16px;
+    width: 68px;
+    height: 34px;
 
-    border-radius: 4px;
+}
+
+.theme-switch input {
+
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+}
+
+.slider {
+
+    position: absolute;
 
     cursor: pointer;
 
-    font-size: 13px;
+    inset: 0;
 
-    font-weight: 600;
+    background:
+        linear-gradient(to right,
+            #dbeafe,
+            #93c5fd);
 
-    transition:
-        background 0.2s ease,
-        border-color 0.2s ease,
-        transform 0.2s ease;
+    border-radius: 50px;
+
+    transition: 0.4s ease;
+
+    border:
+        1px solid rgba(255,255,255,0.2);
+
+    overflow: hidden;
 
 }
+
+.slider::before {
+
+    content: "";
+
+    position: absolute;
+
+    height: 26px;
+    width: 26px;
+
+    left: 4px;
+    top: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    transition: 0.4s ease;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.2);
+
+}
+
+.slider-icon {
+
+    position: absolute;
+
+    left: 9px;
+    top: 7px;
+
+    font-size: 14px;
+
+    transition: 0.4s ease;
+
+}
+
+/* DARK MODE ACTIVE */
+
+input:checked + .slider {
+
+    background:
+        linear-gradient(to right,
+            #0f172a,
+            #1e293b);
+
+}
+
+input:checked + .slider::before {
+
+    transform: translateX(33px);
+
+}
+
+input:checked + .slider .slider-icon {
+
+    transform: translateX(33px);
+
+    content: "🌙";
+
+}
+
+/* HOVER */
+
+.theme-switch:hover .slider {
+
+    box-shadow:
+        0 0 12px rgba(255,255,255,0.15);
+
+}
+
 
 .theme-toggle:hover {
 
     background: rgba(255,255,255,0.18);
 
     border-color: rgba(255,255,255,0.35);
-
-}
-
-.theme-icon {
-
-    font-size: 14px;
 
 }
 
@@ -376,12 +461,6 @@ body.dark .theme-toggle {
 }
 
 /* SECTIONS */
-
-.section {
-
-    padding: 70px 0;
-
-}
 
 .light-section {
 
