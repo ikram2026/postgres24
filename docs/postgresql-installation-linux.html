@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        PostgreSQL Installation on Linux
+    </title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <!-- TOP HEADER -->
+
+    <div class="topbar">
+
+        <div class="container topbar-content">
+
+            <div class="brand">
+
+                <img src="https://www.postgresql.org/media/img/about/press/elephant.png"
+                     alt="PostgreSQL Logo">
+
+                <div>
+
+                    <h1>
+                        PostgreSQL Documentation
+                    </h1>
+
+                    <p>
+                        Linux Installation & Administration Guide
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <div class="container">
+
+            <ul>
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#rhel">
+                        RHEL
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#ubuntu">
+                        Ubuntu
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#sudo">
+                        Sudo User
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <h2>
+                PostgreSQL Installation on Linux
+            </h2>
+
+            <p>
+
+                Enterprise PostgreSQL installation,
+                repository configuration,
+                Linux administration and
+                PostgreSQL server deployment
+                for Red Hat Enterprise Linux and Ubuntu systems.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- RHEL SECTION -->
+
+    <section class="section"
+             id="rhel">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                PostgreSQL Installation on RHEL (Linux)
+            </h2>
+
+            <div class="card">
+
+                <h3>
+                    Step 1
+                </h3>
+
+                <p>
+                    Navigate to:
+                </p>
+
+<pre>
+https://www.postgresql.org/download/
+</pre>
+
+                <h3>
+                    Step 2
+                </h3>
+
+                <p>
+                    Select operating system as Linux.
+                </p>
+
+                <h3>
+                    Step 3
+                </h3>
+
+                <p>
+                    Select appropriate Linux distribution
+                    (Example: Red Hat).
+                </p>
+
+                <h3>
+                    Step 4
+                </h3>
+
+                <p>
+                    Select PostgreSQL YUM Repository.
+                </p>
+
+                <h3>
+                    Step 5
+                </h3>
+
+                <p>
+                    Select latest PostgreSQL version.
+                </p>
+
+                <h3>
+                    Step 6
+                </h3>
+
+                <p>
+                    Select appropriate platform.
+                </p>
+
+                <h3>
+                    Step 7
+                </h3>
+
+                <p>
+
+                    Copy and execute the installation commands
+                    on your Linux server.
+
+                </p>
+
+<pre>
+# Install PostgreSQL repository
+
+sudo dnf install -y \
+https://download.postgresql.org/pub/repos/yum/reporpms/EL-10-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+
+# Disable built-in PostgreSQL module
+
+sudo dnf -qy module disable postgresql
+
+# Install PostgreSQL Server
+
+sudo dnf install -y postgresql17-server
+
+# Install PostgreSQL Contrib Package
+
+sudo dnf install -y postgresql17-contrib
+
+# Initialize Database
+
+sudo /usr/pgsql-17/bin/postgresql-17-setup initdb
+
+# Enable PostgreSQL Service
+
+sudo systemctl enable postgresql-17
+
+# Start PostgreSQL Service
+
+sudo systemctl start postgresql-17
+
+# Verify Service Status
+
+sudo systemctl status postgresql-17
+</pre>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SUDO USER -->
+
+    <section class="section light-section"
+             id="sudo">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Create Sudo User on Linux
+            </h2>
+
+            <div class="card">
+
+                <h3>
+                    Create User
+                </h3>
+
+<pre>
+adduser username
+passwd username
+</pre>
+
+                <h3>
+                    Add User to Wheel Group
+                </h3>
+
+<pre>
+usermod -aG wheel username
+</pre>
+
+                <h3>
+                    Verify User Membership
+                </h3>
+
+<pre>
+cat /etc/group | grep wheel
+</pre>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- UBUNTU -->
+
+    <section class="section"
+             id="ubuntu">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                PostgreSQL Installation on Ubuntu
+            </h2>
+
+            <div class="card">
+
+                <h3>
+                    Step 1
+                </h3>
+
+                <p>
+                    Navigate to:
+                </p>
+
+<pre>
+https://www.postgresql.org/download/
+</pre>
+
+                <h3>
+                    Step 2
+                </h3>
+
+                <p>
+                    Select Linux operating system.
+                </p>
+
+                <h3>
+                    Step 3
+                </h3>
+
+                <p>
+                    Select Ubuntu distribution.
+                </p>
+
+                <h3>
+                    Step 4
+                </h3>
+
+                <p>
+
+                    Ubuntu includes PostgreSQL by default.
+                    Install PostgreSQL using apt.
+
+                </p>
+
+<pre>
+sudo apt install postgresql postgresql-contrib
+</pre>
+
+                <h3>
+                    Alternative Method — PostgreSQL APT Repository
+                </h3>
+
+                <p>
+
+                    Use PostgreSQL official repository
+                    for latest PostgreSQL versions.
+
+                </p>
+
+                <h3>
+                    Automated Repository Configuration
+                </h3>
+
+<pre>
+sudo apt install -y postgresql-common
+
+sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+</pre>
+
+                <h3>
+                    Manual Repository Configuration
+                </h3>
+
+<pre>
+# Install required packages
+
+sudo apt install curl ca-certificates
+
+# Create directory
+
+sudo install -d /usr/share/postgresql-common/pgdg
+
+# Download repository key
+
+sudo curl -o \
+/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc \
+--fail \
+https://www.postgresql.org/media/keys/ACCC4CF8.asc
+
+# Configure repository
+
+sudo sh -c \
+'echo "deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] \
+https://apt.postgresql.org/pub/repos/apt \
+$(lsb_release -cs)-pgdg main" \
+> /etc/apt/sources.list.d/pgdg.list'
+
+# Update package list
+
+sudo apt update
+
+# Install PostgreSQL
+
+sudo apt -y install postgresql
+</pre>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ENTERPRISE CONTACT -->
+
+    <section class="enterprise-contact">
+
+        <div class="container enterprise-contact-content">
+
+            <div>
+
+                <h2>
+                    Need PostgreSQL Enterprise Support?
+                </h2>
+
+                <p>
+
+                    PostgreSQL administration,
+                    replication architecture,
+                    high availability,
+                    performance tuning and
+                    enterprise DBA consulting.
+
+                </p>
+
+            </div>
+
+            <div class="contact-action">
+
+                <a href="mailto:ikram5@zohomail.in">
+
+                    Contact Now
+
+                </a>
+
+                <span>
+                    ikram5@zohomail.in
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <h3>
+                    Ikram PostgreSQL Consulting
+                </h3>
+
+                <p>
+
+                    Enterprise PostgreSQL administration,
+                    replication and infrastructure engineering.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h4>
+                    Documentation
+                </h4>
+
+                <ul>
+
+                    <li>
+                        PostgreSQL Installation
+                    </li>
+
+                    <li>
+                        Linux Administration
+                    </li>
+
+                    <li>
+                        PostgreSQL Environment Setup
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h4>
+                    Contact
+                </h4>
+
+                <p>
+                    ikram5@zohomail.in
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        PostgreSQL Environment Variables on Linux
+    </title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <!-- TOP HEADER -->
+
+    <div class="topbar">
+
+        <div class="container topbar-content">
+
+            <div class="brand">
+
+                <img src="https://www.postgresql.org/media/img/about/press/elephant.png"
+                     alt="PostgreSQL Logo">
+
+                <div>
+
+                    <h1>
+                        PostgreSQL Documentation
+                    </h1>
+
+                    <p>
+                        Linux Administration & Environment Setup
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <div class="container">
+
+            <ul>
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#overview">
+                        Overview
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#environment">
+                        Environment Variables
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#verification">
+                        Verification
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <h2>
+                Setup PostgreSQL Environment Variables on Linux
+            </h2>
+
+            <p>
+
+                Configure PostgreSQL environment variables
+                for enterprise Linux administration,
+                automation and PostgreSQL operational management.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- OVERVIEW -->
+
+    <section class="section" id="overview">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Overview
+            </h2>
+
+            <div class="card">
+
+                <p>
+
+                    PostgreSQL environment variables simplify
+                    database administration by allowing Linux
+                    shells and scripts to automatically access
+                    PostgreSQL binaries, data directories and tools.
+
+                </p>
+
+                <p style="margin-top:20px;">
+
+                    This guide demonstrates how to configure
+                    PostgreSQL environment variables
+                    permanently on Linux systems.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ENVIRONMENT VARIABLES -->
+
+    <section class="section light-section"
+             id="environment">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Configure Environment Variables
+            </h2>
+
+            <div class="card">
+
+                <h3>
+                    Step 1 — Open Bash Profile
+                </h3>
+
+                <p>
+
+                    Open the bash profile file
+                    for the PostgreSQL user.
+
+                </p>
+
+<pre>
+vi ~/.bash_profile
+</pre>
+
+                <h3>
+                    Step 2 — Add PostgreSQL Variables
+                </h3>
+
+                <p>
+
+                    Add PostgreSQL binary and data paths.
+
+                </p>
+
+<pre>
+export PATH=/usr/pgsql-17/bin:$PATH
+export PGDATA=/var/lib/pgsql/17/data
+</pre>
+
+                <h3>
+                    Step 3 — Save File
+                </h3>
+
+                <p>
+
+                    Save and exit the editor.
+
+                </p>
+
+<pre>
+:wq
+</pre>
+
+                <h3>
+                    Step 4 — Reload Profile
+                </h3>
+
+                <p>
+
+                    Reload the profile configuration.
+
+                </p>
+
+<pre>
+source ~/.bash_profile
+</pre>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- VERIFICATION -->
+
+    <section class="section"
+             id="verification">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Verify Configuration
+            </h2>
+
+            <div class="card">
+
+                <h3>
+                    Verify PostgreSQL PATH
+                </h3>
+
+<pre>
+which psql
+</pre>
+
+                <h3>
+                    Check PostgreSQL Version
+                </h3>
+
+<pre>
+psql --version
+</pre>
+
+                <h3>
+                    Verify PGDATA
+                </h3>
+
+<pre>
+echo $PGDATA
+</pre>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ENTERPRISE CONTACT -->
+
+    <section class="enterprise-contact">
+
+        <div class="container enterprise-contact-content">
+
+            <div>
+
+                <h2>
+                    Need PostgreSQL Enterprise Support?
+                </h2>
+
+                <p>
+
+                    PostgreSQL administration,
+                    replication architecture,
+                    high availability,
+                    performance tuning and
+                    enterprise DBA consulting.
+
+                </p>
+
+            </div>
+
+            <div class="contact-action">
+
+                <a href="mailto:ikram5@zohomail.in">
+
+                    Contact Now
+
+                </a>
+
+                <span>
+                    ikram5@zohomail.in
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <h3>
+                    Ikram PostgreSQL Consulting
+                </h3>
+
+                <p>
+
+                    Enterprise PostgreSQL administration,
+                    replication and infrastructure engineering.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h4>
+                    Documentation
+                </h4>
+
+                <ul>
+
+                    <li>
+                        Linux Administration
+                    </li>
+
+                    <li>
+                        PostgreSQL Installation
+                    </li>
+
+                    <li>
+                        Environment Variables
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h4>
+                    Contact
+                </h4>
+
+                <p>
+                    ikram5@zohomail.in
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

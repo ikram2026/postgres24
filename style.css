@@ -719,6 +719,27 @@ body.dark .card p {
     background: var(--pg-dark);
 
 }
+/* DOCUMENTATION CODE BLOCK */
+
+pre {
+
+    background: #0f172a;
+
+    color: #f8fafc;
+
+    padding: 18px;
+
+    border-radius: 6px;
+
+    overflow-x: auto;
+
+    margin: 20px 0;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
 
 /* FOOTER */
 
