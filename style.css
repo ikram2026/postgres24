@@ -688,6 +688,37 @@ body.dark .card p {
     opacity: 0.9;
 
 }
+/* DOCUMENT BUTTON */
+
+.doc-button {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    background: var(--pg-blue);
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 4px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+
+}
+
+.doc-button:hover {
+
+    background: var(--pg-dark);
+
+}
 
 /* FOOTER */
 
